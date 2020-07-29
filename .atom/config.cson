@@ -1,0 +1,29 @@
+"*":
+  "atom-material-ui":
+    colors:
+      abaseColor: "#0080ff"
+    tabs:
+      stretchedTabs: true
+  core:
+    disabledPackages: [
+      "spell-check"
+      "atom-latex"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "one-dark-syntax"
+    ]
+    uriHandlerRegistration: "always"
+  editor:
+    fontSize: 12
+    tabLength: 4
+  "exception-reporting":
+    userId: "81b1007a-c4f6-47c6-bc69-2e068a3c49f5"
+  "language-log":
+    tail: true
+  "terminal-plus":
+    core:
+      shell: "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe "
+  welcome:
+    showOnStartup: false
