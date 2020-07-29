@@ -22,11 +22,6 @@
     "editor.tabCompletion": "on",
 
 
-    // "editor.quickSuggestions": {
-    //     "other": true,
-    //     "comments": false,
-    //     "strings": false
-    // },
     
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "editor.suggestSelection": "first",
