@@ -63,6 +63,25 @@ function enable_clipboard_wsl() {
 # gopass generate password
 alias makepass='gopass pwgen -x --xs -'
 
+# go colorized test
+function go_test() {
+    go test $* | \
+    sed ''/PASS/s//$(printf "\033[32mPASS\033[0m")/'' | \
+    sed ''/SKIP/s//$(printf "\033[34mSKIP\033[0m")/'' | \
+    sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | \
+    GREP_COLOR="01;33" egrep --color=always '\s*[a-zA-Z0-9\-_.]+[:][0-9]+[:]|^'
+}
+
+function _gotest() {
+    # TODO: not working
+    go test $* |
+    sed ''/PASS/s//$(echo $fg[green] "PASS")/'' | \
+    sed ''/SKIP/s//$(echo $fg[blue] "SKIP")/'' | \
+    sed ''/FAIL/s//$(echo $fg[red] "FAIL"/'') | \
+    GREP_COLOR=$fg[yellow] egrep --color=always '\s*[a-zA-Z0-9\-_.]+[:][0-9]+[:]|^'
+}
+
+
 
 # --------------------------------- GIT ---------------------------------
 
