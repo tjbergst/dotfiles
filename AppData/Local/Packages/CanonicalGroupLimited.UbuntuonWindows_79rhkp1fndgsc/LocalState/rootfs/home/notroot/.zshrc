@@ -1,10 +1,18 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # zshrc
 
 # --------------------------------- INIT ZSH ---------------------------------
 
 # globals
 export ZSH="/home/notroot/.oh-my-zsh"
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_AUTO_UPDATE="true"
 
 
@@ -30,6 +38,7 @@ eval "$(dircolors ~/.dircolors)";
 export PATH=$PATH:$HOME/.cargo/bin
 
 # go 
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin  
 
 
@@ -104,3 +113,10 @@ setopt no_share_history
 
 # load completions?
 autoload -U compinit && compinit
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# set goproxy
+set_goproxy 
+

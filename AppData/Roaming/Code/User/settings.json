@@ -76,6 +76,7 @@
         "vs-kubernetes.kubectl-path.linux": "/mnt/c/openshift/kubectl.exe"
     },
     "python.languageServer": "Microsoft",
+    "go.autocompleteUnimportedPackages": true,
 
 
 
