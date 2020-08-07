@@ -29,5 +29,10 @@
 			"body": "log.Fatalf(\"$1\", ${2:var})",
 			"description": "Snippet for log.Fatalf()"
 		},
+		"t.Fatalf": {
+			"prefix": "tff",
+			"body": "t.Fatalf(\"$1\", ${2:var})",
+			"description": "Snippet for t.Fatalf()"
+		},
 
 }
