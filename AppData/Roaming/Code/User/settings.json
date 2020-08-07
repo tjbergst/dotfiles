@@ -77,9 +77,10 @@
     },
     "python.languageServer": "Microsoft",
     "go.autocompleteUnimportedPackages": true,
+    "go.formatTool": "goimports",
 
 
-
+    "editor.snippetSuggestions": "top",
 
 
 }
